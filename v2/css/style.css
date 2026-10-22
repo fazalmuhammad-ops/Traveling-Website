@@ -1,0 +1,57 @@
+:root{--ink:#231815;--mar:#8c2f1b;--mar-d:#6b2113;--saf:#e8871e;--sand:#fbf3e4;--sand2:#f2e4c9;--card:#fff;--muted:#5d4a42;--line:#e4d3b5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:1.0625rem/1.7 "DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--sand)}
+h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.6rem,7vw,5rem)}h2{font-size:clamp(1.9rem,4vw,2.8rem)}h3{font-size:1.45rem}
+a{color:var(--mar)}img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--mar);outline-offset:3px}
+.skip{position:absolute;left:-999px;background:var(--saf);color:#000;padding:.6rem 1rem;z-index:99}.skip:focus{left:1rem;top:1rem}
+.wrap{max-width:1120px;margin:auto;padding:0 1.25rem}
+header.site{background:var(--sand);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;min-height:72px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--mar);font:1.5rem "DM Serif Display",serif}
+.brand svg{width:40px;height:40px}.brand small{display:block;font:600 .7rem "DM Sans";letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+nav ul{list-style:none;display:flex;gap:.4rem;margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink);padding:.5rem 1rem;border-radius:999px;display:block;font-weight:600}
+nav a:hover{background:var(--sand2)}nav a[aria-current=page]{background:var(--mar);color:#fff}
+.menu-btn{display:none;background:var(--mar);border:0;color:#fff;padding:.5rem 1rem;border-radius:999px;font:inherit;font-weight:600;cursor:pointer}
+.btn{display:inline-block;background:var(--saf);color:#231815;font-weight:700;text-decoration:none;padding:.85rem 1.6rem;border-radius:8px;border:0;cursor:pointer;font:700 1rem "DM Sans"}
+.btn:hover{background:#f59a36}.btn.dark{background:var(--mar);color:#fff}.btn.dark:hover{background:var(--mar-d)}
+.hero{position:relative;min-height:82vh;display:grid;place-items:center;text-align:center;color:#fff;background:linear-gradient(rgba(60,15,5,.35),rgba(60,15,5,.7)),url(../images/hero.jpg) center/cover,var(--mar-d)}
+.hero p{max-width:36rem;margin:0 auto 1.5rem;font-size:1.2rem}
+.eyebrow{font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.8rem;color:var(--saf);margin-bottom:.8rem}
+.enquiry{background:var(--sand);color:var(--ink);border-radius:14px;padding:1rem;display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));align-items:end;max-width:760px;margin:2rem auto 0;text-align:left}
+.enquiry label{font-size:.85rem;font-weight:700;display:block}
+.page-head{background:var(--mar);color:#fff;padding:4rem 0;background-image:radial-gradient(circle at 90% 0,rgba(232,135,30,.5),transparent 40%)}.page-head p{max-width:40rem;margin:0}
+section{padding:4.5rem 0}.alt-bg{background:var(--sand2)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;text-align:center;padding:2rem 0;margin:0;list-style:none}
+.stats strong{display:block;font:2.6rem "DM Serif Display";color:var(--mar)}
+.tiles{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.tile{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:var(--mar-d);text-decoration:none;color:#fff;display:flex;align-items:flex-end}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}.tile:hover img{transform:scale(1.06)}
+.tile span{position:relative;width:100%;padding:3rem 1rem 1rem;background:linear-gradient(transparent,rgba(30,8,3,.85));font:1.4rem "DM Serif Display"}
+.grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card .body{padding:1.3rem;display:flex;flex-direction:column;gap:.5rem;flex:1}.card .body>.btn{margin-top:auto;text-align:center}
+.card img{aspect-ratio:3/2;object-fit:cover;width:100%;background:var(--mar-d)}
+.badge{display:inline-block;background:var(--sand2);color:var(--mar-d);font-weight:700;font-size:.85rem;padding:.2rem .7rem;border-radius:999px}
+.price{font:1.7rem "DM Serif Display";color:var(--mar)}.meta{margin:0;color:var(--muted);font-size:.95rem}
+.steps{counter-reset:s;display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));list-style:none;padding:0}
+.steps li{counter-increment:s;background:var(--card);border-radius:14px;padding:1.5rem;border:1px solid var(--line)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--mar);color:#fff;font:1.3rem "DM Serif Display";margin-bottom:.8rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;margin-bottom:4rem}.row:nth-child(even) .pic{order:2}
+.row img{border-radius:18px;aspect-ratio:4/3;object-fit:cover;width:100%;background:var(--mar-d)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:.5rem 0}.chips li{background:var(--sand2);border-radius:999px;padding:.2rem .8rem;font-size:.9rem}
+.days{padding-left:1.2rem}.days li{margin-bottom:.3rem}
+.facts{display:flex;flex-wrap:wrap;gap:1.5rem;margin:1rem 0}.facts div{font-size:.9rem;color:var(--muted)}.facts strong{display:block;color:var(--ink);font-size:1.05rem}
+.split{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.timeline{border-left:3px solid var(--saf);padding-left:1.5rem;list-style:none;margin:0}.timeline li{margin-bottom:1.2rem}.timeline strong{color:var(--mar)}
+.avatar{width:72px;height:72px;border-radius:50%;background:var(--mar);color:#fff;display:grid;place-items:center;font:1.8rem "DM Serif Display"}
+.band{background:var(--mar);color:#fff;text-align:center}.band a.btn{margin-top:.5rem}
+form{display:grid;gap:1rem}label{font-weight:700;display:block;margin-bottom:.3rem}
+input,select,textarea{width:100%;padding:.8rem;border:2px solid var(--line);border-radius:8px;font:inherit;background:#fff;color:var(--ink)}
+.msg{font-weight:700;color:#1f6b3a}iframe{width:100%;height:300px;border:0;border-radius:14px}
+footer{background:var(--ink);color:#f2e4c9;padding:3rem 0}footer a{color:#fff}footer .wrap{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+footer h2{font-size:1.2rem;color:var(--saf)}
+@media(max-width:780px){.menu-btn{display:block}nav{display:none;position:absolute;left:0;right:0;top:72px;background:var(--sand);border-bottom:1px solid var(--line)}nav.open{display:block}nav ul{flex-direction:column;padding:1rem}.row{grid-template-columns:1fr}.row:nth-child(even) .pic{order:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile img{transition:none}}
